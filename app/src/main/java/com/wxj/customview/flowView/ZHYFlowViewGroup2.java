@@ -135,6 +135,7 @@ public class ZHYFlowViewGroup2 extends ViewGroup {
             lineWidth += childView.getMeasuredWidth() + lp.leftMargin + lp.rightMargin;
             mLineViews.add(childView);
         }
+        
         //处理最后一行
         mAllViews.add(mLineViews);
         mLineHeight.add(lineHeight);
