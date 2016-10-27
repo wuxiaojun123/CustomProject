@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="com.wxj.customview.MainActivity">
+
+        <Button
+            android:id="@+id/btn_guaguaka"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="刮刮卡效果" />
+
+        <Button
+            android:id="@+id/btn_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="箭头旋转动画" />
+
+        <Button
+            android:id="@+id/btn_viewgroup_event"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="viewGroup和view的事件传递和分发" />
+
+        <Button
+            android:id="@+id/btn_expland_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="自定义展开收缩view" />
+
+        <Button
+            android:id="@+id/btn_zhifubao_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="仿照支付宝支付动画效果" />
+
+        <Button
+            android:id="@+id/btn_waterfall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="瀑布流效果" />
+
+        <Button
+            android:id="@+id/btn_flow_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="流式布局效果" />
+
+        <Button
+            android:id="@+id/btn_locky_pan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="抽奖转盘效果" />
+
+        <Button
+            android:id="@+id/btn_qq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="仿照qq下拉阻尼动画效果" />
+
+        <Button
+            android:id="@+id/btn_circle_scale"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="圆盘刻度" />
+
+        <Button
+            android:id="@+id/btn_path_measure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="pathmeasure的使用" />
+
+        <Button
+            android:id="@+id/btn_webview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="webview打开多窗口" />
+
+        <Button
+            android:id="@+id/btn_aidl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="aidl的学习" />
+
+        <Button
+            android:id="@+id/btn_sqlite"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="sqlite的学习" />
+
+        <Button
+            android:id="@+id/btn_matrix"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="matrix的学习" />
+
+        <Button
+            android:id="@+id/btn_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="recycler上拉刷新下拉加载左滑删除" />
+
+        <Button
+            android:id="@+id/btn_popup_window"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="popupwindow动画" />
+
+        <Button
+            android:id="@+id/btn_view_drag_helper"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="viewdraghelper的使用" />
+
+    </LinearLayout>
+
+</ScrollView>

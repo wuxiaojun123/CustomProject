@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wxj.animatordemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_translation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="平移动画" />
+
+    <ImageView
+        android:id="@+id/img_ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#ff0000"
+        android:scaleType="center"
+         />
+
+</LinearLayout>

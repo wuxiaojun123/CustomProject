@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wxj.customview">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".GuaGuaKaActivity.GuaGuaKaActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".arrow.ArrowActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".viewgroupEvent.ViewGroupActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".explandView.ExplandViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".zhifubao.ZhiFuBaoAnimActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".waterfallFlow.WaterFallFlowActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".flowView.FlowViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".surfaceview.SurfaceViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".qq.QQMainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".circle.scale.CircleScaleActivity"
+            android:screenOrientation="portrait" />s
+
+        <activity android:name=".pathmeasure.PathMeasureActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".webview.WebViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".aidl.AIDLActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".sqlite.SqliteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".matrix.MatrixActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".recyclerview.RecyclerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".viewdraghelper.ViewDragHelperActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

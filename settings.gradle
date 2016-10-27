@@ -1,0 +1,8 @@
+include ':app'
+include ':lib'
+include ':animatordemo'
+include ':rxjavaretrift'
+include ':mvpproject'
+include ':qqpulldownproject'
+//include ':serverproject'
+//include ':clientproject'
