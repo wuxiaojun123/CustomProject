@@ -22,6 +22,7 @@ import com.wxj.customview.recyclerview.RecyclerActivity;
 import com.wxj.customview.sqlite.SqliteActivity;
 import com.wxj.customview.surfaceview.SurfaceViewActivity;
 import com.wxj.customview.viewdraghelper.ViewDragHelperActivity;
+import com.wxj.customview.viewdraghelpertest.VerticalDragActivity;
 import com.wxj.customview.viewgroupEvent.ViewGroupActivity;
 import com.wxj.customview.waterfallFlow.WaterFallFlowActivity;
 import com.wxj.customview.webview.WebViewActivity;
@@ -85,7 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.btn_waterfall, R.id.btn_flow_view, R.id.btn_locky_pan,
             R.id.btn_qq, R.id.btn_circle_scale, R.id.btn_path_measure,
             R.id.btn_webview, R.id.btn_aidl, R.id.btn_sqlite, R.id.btn_matrix,
-            R.id.btn_recycler,R.id.btn_popup_window,R.id.btn_view_drag_helper})
+            R.id.btn_recycler, R.id.btn_popup_window, R.id.btn_view_drag_helper,
+            R.id.btn_vertical_drag})
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -147,6 +149,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_view_drag_helper:
                 //
                 startActivity(ViewDragHelperActivity.class);
+                break;
+            case R.id.btn_vertical_drag:
+                startActivity(VerticalDragActivity.class);
+
                 break;
         }
     }

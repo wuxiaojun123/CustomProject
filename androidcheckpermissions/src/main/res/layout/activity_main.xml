@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wxj.check.permission.MainActivity">
+
+
+    <Button
+        android:id="@+id/id_btn_request_permission"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="获取camera权限" />
+
+
+</RelativeLayout>

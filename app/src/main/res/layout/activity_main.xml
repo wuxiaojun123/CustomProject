@@ -12,7 +12,7 @@
         android:padding="10dp"
         tools:context="com.wxj.customview.MainActivity">
 
-        <Button
+        <com.wxj.customview.WaterRippleView
             android:id="@+id/btn_guaguaka"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -119,6 +119,12 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="viewdraghelper的使用" />
+
+        <Button
+            android:id="@+id/btn_vertical_drag"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="viewdraghelper的实例--上下拖动" />
 
     </LinearLayout>
 

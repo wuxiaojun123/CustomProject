@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">插件化-加载其他apk中的资源文件</string>
+    <string name="content">牛逼啊！插件化实现，获取插件中的资源文件</string>
+</resources>

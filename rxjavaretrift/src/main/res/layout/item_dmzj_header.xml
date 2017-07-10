@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_item_dmzj_header_height"
+        android:background="@mipmap/img_banner_default" />
+
+    <LinearLayout
+        android:id="@+id/id_ll_dot"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/id_iv_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_item_dmzj_header_height"
+        android:background="@mipmap/img_banner_default"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+</RelativeLayout>

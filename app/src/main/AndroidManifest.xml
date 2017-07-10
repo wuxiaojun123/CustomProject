@@ -3,7 +3,10 @@
     package="com.wxj.customview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,62 +16,101 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
+            <!--<intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="splash"
+                    android:scheme="cundong" />
+            </intent-filter>-->
         </activity>
 
-        <activity android:name=".GuaGuaKaActivity.GuaGuaKaActivity"
+        <activity
+            android:name=".GuaGuaKaActivity.GuaGuaKaActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".arrow.ArrowActivity"
+        <activity
+            android:name=".arrow.ArrowActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".viewgroupEvent.ViewGroupActivity"
+        <activity
+            android:name=".viewgroupEvent.ViewGroupActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".explandView.ExplandViewActivity"
+        <activity
+            android:name=".explandView.ExplandViewActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".zhifubao.ZhiFuBaoAnimActivity"
+        <activity
+            android:name=".zhifubao.ZhiFuBaoAnimActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".waterfallFlow.WaterFallFlowActivity"
+        <activity
+            android:name=".waterfallFlow.WaterFallFlowActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".flowView.FlowViewActivity"
+        <activity
+            android:name=".flowView.FlowViewActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".surfaceview.SurfaceViewActivity"
+        <activity
+            android:name=".surfaceview.SurfaceViewActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".qq.QQMainActivity"
+        <activity
+            android:name=".qq.QQMainActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".circle.scale.CircleScaleActivity"
+        <activity
+            android:name=".circle.scale.CircleScaleActivity"
             android:screenOrientation="portrait" />s
 
-        <activity android:name=".pathmeasure.PathMeasureActivity"
+        <activity
+            android:name=".pathmeasure.PathMeasureActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".webview.WebViewActivity"
+
+        <activity
+            android:name=".aidl.AIDLActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".aidl.AIDLActivity"
+        <activity
+            android:name=".sqlite.SqliteActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".sqlite.SqliteActivity"
+        <activity
+            android:name=".matrix.MatrixActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".matrix.MatrixActivity"
+        <activity
+            android:name=".recyclerview.RecyclerActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".recyclerview.RecyclerActivity"
+        <activity
+            android:name=".viewdraghelper.ViewDragHelperActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".viewdraghelper.ViewDragHelperActivity"
+        <activity
+            android:name=".viewdraghelpertest.VerticalDragActivity"
             android:screenOrientation="portrait" />
 
     </application>

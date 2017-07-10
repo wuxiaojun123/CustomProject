@@ -56,32 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    /*private void startAnim() {
-        TranslateAnimation translateAnimation = new TranslateAnimation(0, 100, 0, 100);
-        translateAnimation.setDuration(1000);
-        translateAnimation.setFillAfter(true);
-        iv_laucher.startAnimation(translateAnimation);
-        translateAnimation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                //清除动画
-                iv_laucher.clearAnimation();
-                LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) iv_laucher.getLayoutParams();
-                params.leftMargin = params.leftMargin + 100;
-                params.topMargin = params.topMargin + 100;
-                iv_laucher.setLayoutParams(params);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-    }*/
-
     public void startActivity(Class<?> cls) {
         Intent mIntent = new Intent(MainActivity.this, cls);
         startActivity(mIntent);

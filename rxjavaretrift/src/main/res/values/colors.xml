@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="color_while">@android:color/white</color>
+    <color name="color_black">@android:color/black</color>
+    <color name="color_main_title">#fcc100</color>
+
+    <color name="color_line">#e8e8e8</color>
+
+    <color name="color_about_text">#333333</color>
+    <color name="color_about_good_text">#666666</color>
+    <color name="color_9">#999999</color>
+    <color name="color_6">#666666</color>
+    <color name="color_ed">#ededed</color>
+    <color name="color_d7">#d7d7d7</color>
+
+    <color name="color_46">#464646</color>
+
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+    <color name="color_while_night">#474747</color>
+
+    <color name="color_popup_bg">#ffffff</color>
+
+    <color name="color_f2">#f2f2f2</color>
+
+    <color name="color_notification">#ffc000</color>
+
+    <color name="color_popupwindow_text">#666666</color>
+    <color name="color_popupwindow_text_night">#c9c9c9</color>
 </resources>

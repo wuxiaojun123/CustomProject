@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wxj.customview.viewdraghelpertest.VerticalDragView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/id_top_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/string_desc" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/id_btn_drag"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="拖拽" />
+
+    <ScrollView
+        android:id="@+id/id_bottom_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_red">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/string_desc" />
+
+    </ScrollView>
+
+
+</com.wxj.customview.viewdraghelpertest.VerticalDragView>

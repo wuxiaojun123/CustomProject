@@ -1,3 +1,72 @@
 <resources>
     <string name="app_name">RxJavaRetrift</string>
+
+    <!--<string name="string_main_title">动漫浏览器</string>-->
+    <string name="string_clean_success">清除完成</string>
+
+    <string name="string_praise">给个好评</string>
+
+    <string name="string_qq">QQ:450862959</string>
+    <string name="string_user_test">用户测试群</string>
+    <string name="string_about">关于</string>
+
+    <!--热门推荐和最新更新-->
+    <string name="string_hot">热门推荐</string>
+    <string name="string_new_update">最新更新</string>
+
+    <!--更多弹窗-->
+    <string name="string_share">分享</string>
+    <string name="string_clean_cache">清空缓存</string>
+    <string name="string_add_shortcut">添加到桌面</string>
+    <string name="string_night_mode">夜间模式</string>
+    <string name="string_night_day_mode">白天模式</string>
+    <string name="string_check_update">检查更新</string>
+    <string name="string_feedback">反馈</string>
+    <string name="string_exit">退出</string>
+
+    <!--弹窗提示-->
+    <string name="string_prompt">提示</string>
+    <string name="string_confirm">确定</string>
+    <string name="string_cancel">取消</string>
+    <string name="string_title">标题</string>
+    <string name="string_content">内容</string>
+    <string name="string_confirm_cancel">确定要取消吗?</string>
+    <string name="string_confirm_add_shortcut">确定要添加到桌面吗?</string>
+    <string name="string_confirm_clean_all_cache">确认清除所有缓存?</string>
+    <string name="string_confirm_clean_all_records">确认删除所有收藏吗?</string>
+    <string name="string_confirm_exit_app">确定要退出吗?</string>
+
+    <!--历史记录-->
+    <string name="string_history">历史记录</string>
+    <string name="string_records">收藏</string>
+    <string name="string_alread_records">已收藏</string>
+    <string name="string_delete_all">全部删除</string>
+    <string name="string_no_history">无历史记录</string>
+    <string name="string_no_records">无收藏记录</string>
+    <string name="string_remove">删除</string>
+    <!--添加桌面快捷方式-->
+    <string name="string_create_shortcut_success">创建成功</string>
+
+    <!--首页-->
+    <string name="string_no_network_check_setting">咦...没网了...快去检查下网络</string>
+    <string name="string_address_error">到了荒漠之地，去逛逛别的~</string>
+
+    <string name="string_press_again">请再按一次退出</string>
+    <string name="string_loading">正在加载</string>
+
+    <string name="string_remove_all_history">删除所有历史记录</string>
+
+    <!--点击背景变深色-->
+    <drawable name="color_normal">#ffffff</drawable>
+    <drawable name="color_normal_night">#474747</drawable>
+    <drawable name="color_pressed">#e8e8e8</drawable>
+    <drawable name="color_pressed_night">#565656</drawable>
+    <drawable name="color_normal_day">#ffffff</drawable>
+    <drawable name="color_pressed_day">#e8e8e8</drawable>
+
+    <!--google admob广告单元id-->
+    <string name="ad_unit_id">ca-app-pub-8330606192746568/9520583531</string>
+    <!--facebook的广告-->
+    <string name="facebook_app_id">755068621306828</string>
+
 </resources>

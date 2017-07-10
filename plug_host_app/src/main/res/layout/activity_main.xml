@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_skin_main_bg1"
+    tools:context="com.liunian.plug.MainActivity">
+
+    <Button
+        android:id="@+id/btn_toogle_skin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="点击切换皮肤" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="插件化开发，也不是那么的难！哈哈"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

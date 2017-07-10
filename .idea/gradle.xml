@@ -9,14 +9,22 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/androidcheckpermissions" />
             <option value="$PROJECT_DIR$/animatordemo" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app_webview_onscrollchange" />
+            <option value="$PROJECT_DIR$/easypermissions" />
             <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/library_swipeback" />
             <option value="$PROJECT_DIR$/mvpproject" />
+            <option value="$PROJECT_DIR$/plug_host_app" />
+            <option value="$PROJECT_DIR$/plug_host_dexclassloader" />
+            <option value="$PROJECT_DIR$/plug_service_skin1" />
             <option value="$PROJECT_DIR$/qqpulldownproject" />
             <option value="$PROJECT_DIR$/rxjavaretrift" />
           </set>
         </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
