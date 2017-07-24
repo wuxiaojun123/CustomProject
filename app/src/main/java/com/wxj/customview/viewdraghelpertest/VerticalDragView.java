@@ -17,7 +17,7 @@ import com.wxj.customview.R;
 
 public class VerticalDragView extends LinearLayout {
 
-    public static final int MIN_TOP = 500;
+    public static final int MIN_TOP = 100;
 
     private ScrollView topScrollView;
     private Button dragBtn;
@@ -77,7 +77,6 @@ public class VerticalDragView extends LinearLayout {
                 bottomParams.height = bottomParams.height + dy * -1;
                 bottomScrollView.setLayoutParams(bottomParams);
 
-
                 LinearLayout.LayoutParams topParams = (LayoutParams) topScrollView.getLayoutParams();
                 topParams.height = topParams.height + dy;
                 topScrollView.setLayoutParams(topParams);
@@ -110,7 +109,7 @@ public class VerticalDragView extends LinearLayout {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        dragBtnHeight = getMeasuredHeight();
+        dragBtnHeight = dragBtn.getMeasuredHeight();
 
     }
 
