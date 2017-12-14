@@ -113,6 +113,12 @@
             android:name=".viewdraghelpertest.VerticalDragActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".recyclerview.RecyclerManagerActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
+                  android:screenOrientation="portrait" />
     </application>
 
 </manifest>

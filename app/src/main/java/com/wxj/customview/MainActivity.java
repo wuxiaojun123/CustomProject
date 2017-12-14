@@ -19,6 +19,7 @@ import com.wxj.customview.matrix.MatrixActivity;
 import com.wxj.customview.pathmeasure.PathMeasureActivity;
 import com.wxj.customview.qq.QQMainActivity;
 import com.wxj.customview.recyclerview.RecyclerActivity;
+import com.wxj.customview.recyclerview.RecyclerManagerActivity;
 import com.wxj.customview.sqlite.SqliteActivity;
 import com.wxj.customview.surfaceview.SurfaceViewActivity;
 import com.wxj.customview.viewdraghelper.ViewDragHelperActivity;
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
             } else if (i == 14) {
                 mList.add(new MainBean(i, "matrix的学习"));
             } else if (i == 15) {
-                mList.add(new MainBean(i, "recycler上拉刷新下拉加载左滑删除"));
+                mList.add(new MainBean(i, "recyclerview的实例"));
             } else if (i == 16) {
                 mList.add(new MainBean(i, "popupwindow动画"));
             } else if (i == 17) {
@@ -144,8 +145,9 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         } else if (i == 14) {
             startActivity(MatrixActivity.class);
         } else if (i == 15) {
-            startActivity(RecyclerActivity.class);
+            startActivity(RecyclerManagerActivity.class);
         } else if (i == 16) {
+
         } else if (i == 17) {
             startActivity(ViewDragHelperActivity.class);
         } else if (i == 18) {

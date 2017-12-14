@@ -1,4 +1,6 @@
-include ':app', ':plug_host_app', ':plug_service_skin1', ':plug_host_dexclassloader', ':androidcheckpermissions', ':app_webview_onscrollchange'
+include ':app'
+include ':plug_host_app', ':plug_service_skin1', ':plug_host_dexclassloader'
+include ':androidcheckpermissions', ':app_webview_onscrollchange'
 include ':lib'
 include ':animatordemo'
 include ':rxjavaretrift'
