@@ -28,6 +28,7 @@ import com.wxj.customview.viewgroupEvent.ViewGroupActivity;
 import com.wxj.customview.waterfallFlow.WaterFallFlowActivity;
 import com.wxj.customview.webview.WebViewActivity;
 import com.wxj.customview.zhifubao.ZhiFuBaoAnimActivity;
+import com.wxj.customview.zhifubao.antForest.AntForestActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,6 +103,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 mList.add(new MainBean(i, "viewdraghelper的使用"));
             } else if (i == 18) {
                 mList.add(new MainBean(i, "viewdraghelper的实例"));
+            } else if (i == 19) {
+                mList.add(new MainBean(i, "支付宝蚂蚁森林"));
             }
         }
 
@@ -152,6 +155,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
             startActivity(ViewDragHelperActivity.class);
         } else if (i == 18) {
             startActivity(VerticalDragActivity.class);
+        } else if (i == 19) {
+            startActivity(AntForestActivity.class);
         }
 
     }

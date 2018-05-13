@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatterProjectSettings">
+    <option name="projectSpecificProfile">
+      <ProjectSpecificProfile>
+        <option name="formatter" value="ECLIPSE" />
+        <option name="pathToConfigFileJava" value="D:/developmentTools/plugin/J2wFormatter0.0.2.xml" />
+        <option name="selectedJavaProfile" value="InitFormatter0.0.2" />
+      </ProjectSpecificProfile>
+    </option>
+  </component>
+</project>

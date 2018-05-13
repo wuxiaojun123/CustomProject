@@ -16,12 +16,12 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainActivity">
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-         </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".webview.WebViewActivity"
@@ -113,12 +113,17 @@
             android:name=".viewdraghelpertest.VerticalDragActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".recyclerview.RecyclerManagerActivity"
-            android:screenOrientation="portrait"
-            />
+        <activity
+            android:name=".recyclerview.RecyclerManagerActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
-                  android:screenOrientation="portrait" />
+        <activity
+            android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".zhifubao.antForest.AntForestActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

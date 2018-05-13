@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="style_popup_ball_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">8dp</item>
+    </style>
+
+    <style name="style_popup_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dimen_15</item>
+        <item name="android:drawablePadding">@dimen/dimen_7</item>
+        <item name="android:textColor">@color/color_7671bd</item>
+        <item name="android:textSize">@dimen/dimen_12</item>
+    </style>
 </resources>
