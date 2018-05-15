@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.wxj.customview.tanqian.game.GameView
+        android:id="@+id/id_game_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/color_ffffff" />
+
+    <Button
+        android:id="@+id/id_btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_game_view"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_red"
+        android:text="开始"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/dimen_20" />
+
+</RelativeLayout>

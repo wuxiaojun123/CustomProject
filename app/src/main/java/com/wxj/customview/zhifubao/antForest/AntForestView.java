@@ -47,9 +47,13 @@ public class AntForestView extends FrameLayout {
 
 	private Random				mRandom					= new Random();																												// 随机数
 
-	private List<Float>			xCanChooseList			= Arrays.asList(0.35f, 0.55f, 0.32f, 0.52f, 0.72f, 0.78f, 0.15f, 0.63f, 0.20f, 0.30f, 0.47f, 0.21f, 0.76f, 0.65f, 0.38f);	// 0.15f,0.15f,0.41f,
+	private List<Float>			xCanChooseList			= Arrays.asList(
+			0.35f, 0.55f, 0.32f, 0.52f, 0.72f, 0.78f, 0.15f, 0.63f, 0.20f,
+			0.30f, 0.47f, 0.21f, 0.76f, 0.65f, 0.38f);
 
-	private List<Float>			yCanChooseList			= Arrays.asList(0.36f, 0.45f, 0.50f, 0.28f, 0.33f, 0.50f, 0.40f, 0.63f, 0.62f, 0.75f, 0.57f, 0.20f, 0.70f, 0.17f, 0.21f);	// 0.77f,0.40f,0.10f,
+	private List<Float>			yCanChooseList			= Arrays.asList(
+			0.36f, 0.45f, 0.50f, 0.28f, 0.33f, 0.50f, 0.40f, 0.63f, 0.62f,
+			0.75f, 0.57f, 0.20f, 0.70f, 0.17f, 0.21f);
 
 	private List<Float>			xCurrentList			= new ArrayList<>(xCanChooseList);
 
@@ -277,7 +281,6 @@ public class AntForestView extends FrameLayout {
 		float y = yCurrentList.get(randomInt) * height;
 		view.setY(y);
 
-		// LogUtils.e("设置的x位置是" + x + "y轴位置是" + y);
 		LogUtils.e("randomInt=" + randomInt + "设置的x位置是" + xCurrentList.get(randomInt) + "y轴位置是" + yCurrentList.get(randomInt));
 
 		view.setTag(R.string.string_origin_location, (float) y);

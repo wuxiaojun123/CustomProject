@@ -15,13 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <!--<activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <activity
             android:name=".webview.WebViewActivity"
@@ -123,6 +123,17 @@
 
         <activity android:name=".zhifubao.antForest.AntForestActivity"
             android:screenOrientation="portrait" />
+
+        <!--<activity android:name=".tanqian.game.GameActivity"
+            android:screenOrientation="portrait" />-->
+        <activity android:name=".tanqian.game.GameActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 

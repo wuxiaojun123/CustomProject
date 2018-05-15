@@ -158,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         } else if (i == 19) {
             startActivity(AntForestActivity.class);
         }
-
     }
 
     private void startActivity(Class<?> cls) {
