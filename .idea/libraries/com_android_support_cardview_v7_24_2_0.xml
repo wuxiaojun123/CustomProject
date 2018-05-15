@@ -1,14 +1,14 @@
 <component name="libraryTable">
   <library name="com.android.support:cardview-v7-24.2.0">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-24.2.0.aar/84da2d683ab547940d0525e9bd08156d/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-24.2.0.aar/84da2d683ab547940d0525e9bd08156d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-24.2.0.aar/c1271a1dca0e32b8e7b97ebcd8546f1e/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-24.2.0.aar/c1271a1dca0e32b8e7b97ebcd8546f1e/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://E:/androidStudio/sdk/extras/android/m2repository/com/android/support/cardview-v7/24.2.0/cardview-v7-24.2.0-javadoc.jar!/" />
+      <root url="jar://D:/developmentTools/Sdk/extras/android/m2repository/com/android/support/cardview-v7/24.2.0/cardview-v7-24.2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://E:/androidStudio/sdk/extras/android/m2repository/com/android/support/cardview-v7/24.2.0/cardview-v7-24.2.0-sources.jar!/" />
+      <root url="jar://D:/developmentTools/Sdk/extras/android/m2repository/com/android/support/cardview-v7/24.2.0/cardview-v7-24.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

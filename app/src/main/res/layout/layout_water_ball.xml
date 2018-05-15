@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_waterball"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/id_iv_waterball"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/img_round_ball" />
+
+    <TextView
+        android:id="@+id/id_tv_waterball"
+        android:layout_marginTop="6dp"
+        android:text="666"
+        style="@style/style_popup_ball_tv" />
+
+</LinearLayout>

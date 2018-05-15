@@ -29,4 +29,19 @@
     <string name="string_desc2" formatted="false">王思聪，1988年1月3日出生于辽宁省大连市，毕业于伦敦大学学院哲学系，[1]  万达集团董事长王健林的独子，北京普思投资有限公司董事长、IG电子竞技俱乐部创始人、万达集团董事。
 2010年底，王思聪持有万达院线约1000万股。[2]  2011年4月，因在微博上炮轰俏江南董事长张兰造谣，引起热议。2014年9月12日，王思聪以侵犯名誉权为由，起诉网易和搜狐，否认斥资千万拉票[3]  。2015年8月末，王思聪出镜的BBC纪录片《中国的秘密》播出[4]  ；9月5日，王思聪参加腾讯《英雄联盟》四周年庆典，并表示担任熊猫TV的CEO。10月24日，中国移动电竞联盟成立，王思聪任主席。[5]
 2016年，新版“京城四少”名单火热出炉，王思聪位居榜首。</string>
+
+    <string name="string_origin_location" />
+    <string name="string_origin_direction" />
+    <string name="string_origin_spe" />
+    <string name="string_popup_assets">资产</string>
+    <string name="string_popup_secret_books">秘籍</string>
+    <string name="string_popup_ranking_list">排行榜</string>
+    <string name="string_popup_play_continue">继续播放</string>
+    <string name="string_production_of_money">弹钱中...</string>
+    <string name="string_dynamic_current">当前弹力值:%1$1s</string>
+    <string name="string_production_of_money_new_user">弹钱中，明天来领吧！</string>
+    <string name="string_next_stag_leading_money_early">现在没了，明天来领吧！</string>
+    <string name="string_next_stag_leading_money_middle">现在没了，下午来领吧！</string>
+    <string name="string_next_stag_leading_money_late">现在没了，夜晚来领吧！</string>
+
 </resources>
