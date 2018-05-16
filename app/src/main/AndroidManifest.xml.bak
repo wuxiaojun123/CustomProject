@@ -116,6 +116,7 @@
 
         <activity
             android:name=".recyclerview.RecyclerManagerActivity"
+<<<<<<< HEAD
             android:screenOrientation="portrait"
             />
 
@@ -126,6 +127,8 @@
         <activity
             android:name=".dongnao.PaintActivity"
             android:screenOrientation="portrait"/>
+=======
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
@@ -144,6 +147,8 @@
             </intent-filter>
         </activity>
 
+
+>>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
     </application>
 
 </manifest>

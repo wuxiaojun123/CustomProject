@@ -46,7 +46,7 @@ public class GameMapManager {
 
 			} else if (i == 4) {
 
-				for (int j = 0; j < mRectFArray[i].length; j++) { // 列
+				for (int j = mRectFArray[i].length-1; j >= 0; j--) { // 列
 					rectF = new RectF(j * singleRectSize, i * singleRectSize, (j + 1) * singleRectSize, (i + 1) * singleRectSize);
 					mRectFArray[i][j] = rectF;
 					if (j <= 2) {

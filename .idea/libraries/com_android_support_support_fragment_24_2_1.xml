@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="com.android.support:support-fragment-24.2.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/9ad8cf2e5b467c1da42b49f4316f6268/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/9ad8cf2e5b467c1da42b49f4316f6268/jars/libs/internal_impl-24.2.1.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/9ad8cf2e5b467c1da42b49f4316f6268/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/b1f3bc3c1383c935eb42651346d0e45f/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/b1f3bc3c1383c935eb42651346d0e45f/jars/libs/internal_impl-24.2.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.1.aar/b1f3bc3c1383c935eb42651346d0e45f/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://D:/developmentTools/Sdk/extras/android/m2repository/com/android/support/support-fragment/24.2.1/support-fragment-24.2.1-javadoc.jar!/" />
