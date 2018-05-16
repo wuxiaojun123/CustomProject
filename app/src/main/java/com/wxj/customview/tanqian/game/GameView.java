@@ -14,8 +14,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.wxj.customview.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 54966 on 2018/5/14.
@@ -23,23 +27,29 @@ import com.wxj.customview.R;
 
 public class GameView extends FrameLayout {
 
-	private Paint		mRectPaint;					// 矩形画笔
+	private Paint			mRectPaint;					// 矩形画笔
 
-	private Paint		mPersonPaint;				// 小人画笔
+	private Paint			mPersonPaint;				// 小人画笔
 
-	private Bitmap		mPersonBitmap;				// 小人
+	private Bitmap			mPersonBitmap;				// 小人
 
-	private int			forwardStep;				// 向前几步
+	private int				forwardStep;				// 向前几步
 
-	private RectF		currentLocationRectF;		// 当前位置
+	private RectF			currentLocationRectF;		// 当前位置
 
-	private int			currentRow, currentColumn;	// 当前位置
+	private int				currentRow, currentColumn;	// 当前位置
 
-	private int			singleRectSize;				// 单个矩形大小
+	private int				singleRectSize;				// 单个矩形大小
 
-	private RectF[][]	mRectFArray;				// 数组
+	private int				maxWidthCount	= 5;		// 一行最大可显示矩形数
 
-	private int			maxWidthCount	= 5;		// 一行最大可显示矩形数
+	private GameMapManager	gameMapManager;
+
+	public List<GameBean>	gameBeanList;
+
+	private HeroAnimation	mHeroAnimation;
+
+	private int				mAnimationState	= 0;		// 当前绘制动画状态ID
 
 	public GameView(@NonNull Context context) {
 		this(context, null);
@@ -64,21 +74,9 @@ public class GameView extends FrameLayout {
 		mPersonPaint = new Paint();
 
 		mPersonBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-	}
 
-	@Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-		/*
-		 * int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec); int widthSpecSize
-		 * = MeasureSpec.getSize(widthMeasureSpec); switch (widthSpecMode) { case
-		 * MeasureSpec.EXACTLY: break; case MeasureSpec.AT_MOST: case
-		 * MeasureSpec.UNSPECIFIED: // 自己测量所有childView，得到最大宽度，然后拿最大宽度和屏幕宽度相比较 break; }
-		 * int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec); int
-		 * heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
-		 * switch(heightSpecMode){ case MeasureSpec.EXACTLY: break; case
-		 * MeasureSpec.AT_MOST: case MeasureSpec.UNSPECIFIED: break; }
-		 * setMeasuredDimension();
-		 */
+		mHeroAnimation = new HeroAnimation();
+		mHeroAnimation.initAnimation(getContext());
 	}
 
 	@Override protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -92,13 +90,51 @@ public class GameView extends FrameLayout {
 	}
 
 	private void drawPersonBitmap(Canvas canvas) {
-		canvas.drawBitmap(mPersonBitmap, currentLocationRectF.left, currentLocationRectF.top, mPersonPaint);
+		if (startGo) {
+			mHeroAnimation.mHeroAnim[mAnimationState].DrawAnimation(canvas, mPersonPaint, currentPointX, currentPointY, singleRectSize);
+
+			switch (mAnimationState) {
+				case HeroAnimation.ANIM_LEFT:
+					currentPointX -= HERO_STEP;
+					if (currentPointX <= currentGameBean.mRectF.left) {
+						currentPosition = currentPosition + 1;
+						currentGameBean = gameBeanList.get(currentPosition);
+						mAnimationState = HeroAnimation.ANIM_LEFT;
+
+					} else {
+						invalidate();
+					}
+
+					break;
+				case HeroAnimation.ANIM_UP:
+					currentPointY -= HERO_STEP;
+					if (currentPointY <= currentGameBean.mRectF.top) {
+						currentPosition = currentPosition + 1;
+						logE("当前的索引是"+currentPosition);
+						currentGameBean = gameBeanList.get(currentPosition);
+						mAnimationState = HeroAnimation.ANIM_LEFT;
+						invalidate();
+					} else {
+						invalidate();
+					}
+
+					break;
+				case HeroAnimation.ANIM_RIGHT:
+
+					break;
+				case HeroAnimation.ANIM_DOWN:
+
+					break;
+			}
+		} else {
+			mHeroAnimation.mHeroAnim[mAnimationState].DrawFrame(canvas, mPersonPaint, currentPointX, currentPointY, 0);
+		}
 	}
 
 	private void drawAllRect(Canvas canvas) {
-		for (int i = 0; i < mRectFArray.length; i++) {
-			for (int j = 0; j < mRectFArray[i].length; j++) {
-				canvas.drawRect(mRectFArray[i][j], mRectPaint);
+		for (int i = 0; i < gameBeanList.size(); i++) {
+			if (gameBeanList.get(i).hide) {
+				canvas.drawRect(gameBeanList.get(i).mRectF, mRectPaint);
 			}
 		}
 	}
@@ -109,58 +145,87 @@ public class GameView extends FrameLayout {
 			return;
 		}
 		singleRectSize = w / maxWidthCount;
-		initRectF(h / singleRectSize, maxWidthCount);
-		initLocation();
 
+		gameMapManager = new GameMapManager();
+		gameBeanList = gameMapManager.getMapFirst(h / singleRectSize, maxWidthCount, singleRectSize);
+
+		currentPosition = 0;
+		currentGameBean = gameBeanList.get(currentPosition);
+		currentLocationRectF = currentGameBean.mRectF;
+		mAnimationState = HeroAnimation.ANIM_UP;
+		currentPointX = (int) currentGameBean.mRectF.left;
+		currentPointY = (int) currentGameBean.mRectF.top;
 	}
 
-	private void initLocation() {
-		currentRow = mRectFArray.length - 1;
-		currentColumn = mRectFArray[mRectFArray.length - 1].length - 1;
+	private GameBean		currentGameBean;
 
-		// currentLocationRectF = mRectFArray[mRectFArray.length -
-		// 1][mRectFArray[mRectFArray.length - 1].length - 1];
-		currentLocationRectF = mRectFArray[currentRow][currentColumn];
+	private int				currentPosition;
 
-		float left = currentLocationRectF.left + (singleRectSize - mPersonBitmap.getWidth()) / 2;
-		float top = currentLocationRectF.top + (singleRectSize - mPersonBitmap.getHeight()) / 2;
-		currentLocationRectF.left = left;
-		currentLocationRectF.top = top;
-	}
+	private boolean			startGo;
 
-	private void initRectF(int heightCount, int widthCount) {
-		mRectFArray = new RectF[heightCount][widthCount];
-		RectF rectF = null;
-		for (int i = 0; i < mRectFArray.length; i++) { // 行
-			for (int j = 0; j < mRectFArray[i].length; j++) { // 列
-				rectF = new RectF(j * singleRectSize, i * singleRectSize, (j + 1) * singleRectSize, (i + 1) * singleRectSize);
-				mRectFArray[i][j] = rectF;
-			}
-		}
-	}
+	public final static int	HERO_STEP	= 2;				// 速度
 
+	private int				currentPointX, currentPointY;	// 当前x和y坐标
+
+	/***
+	 *
+	 * 如何计算小人是往左，上，右，下四个方向走 拿到当前currentGameBean 向前: 拿到前一个frontGameBean
+	 * 比较rowX，如果frontGameBean.rowX < currentGameBean.rowX
+	 * 
+	 * @param step
+	 */
 	public void setForwardStep(int step) {
 		switch (step) {
 			case 1:
-				if (currentRow == 0 && currentColumn == 0) { // 替换场景
+
+				if (currentPosition + 1 >= gameBeanList.size()) {
+					showToast("需要换场景了");
 					return;
 				}
-				if (currentColumn == 0) {
-					currentRow = currentRow - 1;
-					currentColumn = maxWidthCount - 1;
-				} else {
-					currentRow = currentRow;
-					currentColumn = currentColumn - 1;
+				// 例如当前currentGameBean的rowX=5,columnY=2
+				GameBean frontGameBean = gameBeanList.get(currentPosition + 1);
+				if (currentGameBean.rowX > frontGameBean.rowX) { // 换行 rowX为5，需要换成4
+					if (currentGameBean.columnY < frontGameBean.columnY) {
+
+					} else if (currentGameBean.columnY < frontGameBean.columnY) {
+
+					} else {
+						mAnimationState = HeroAnimation.ANIM_UP;
+						currentPosition = currentPosition + 1;
+						currentGameBean = frontGameBean;
+						startGo = true;
+						invalidate();
+					}
+				} else if (currentGameBean.rowX == frontGameBean.rowX) { // 不需要换行
+
 				}
+
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+				break;
+			case 4:
+
+				break;
+			case 5:
+
+				break;
+			case 6:
+
 				break;
 		}
-
-		currentLocationRectF = mRectFArray[currentRow][currentColumn];
 		invalidate();
 	}
 
 	private void logE(String msg) {
 		Log.e("日志", msg);
+	}
+
+	private void showToast(String msg) {
+		Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
 	}
 
 }
