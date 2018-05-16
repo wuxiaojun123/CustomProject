@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wxj.customview">
+          package="com.wxj.customview">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+<<<<<<< HEAD
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+=======
         <!--<activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>-->
+>>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
 
         <activity
             android:name=".webview.WebViewActivity"
@@ -46,75 +56,87 @@
 
         <activity
             android:name=".GuaGuaKaActivity.GuaGuaKaActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".arrow.ArrowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".viewgroupEvent.ViewGroupActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".explandView.ExplandViewActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".zhifubao.ZhiFuBaoAnimActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".waterfallFlow.WaterFallFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".flowView.FlowViewActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".surfaceview.SurfaceViewActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".qq.QQMainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".circle.scale.CircleScaleActivity"
-            android:screenOrientation="portrait" />s
+            android:screenOrientation="portrait"/>s
 
         <activity
             android:name=".pathmeasure.PathMeasureActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
 
         <activity
             android:name=".aidl.AIDLActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".sqlite.SqliteActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".matrix.MatrixActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".recyclerview.RecyclerActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".viewdraghelper.ViewDragHelperActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".viewdraghelpertest.VerticalDragActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".recyclerview.RecyclerManagerActivity"
+<<<<<<< HEAD
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".dongnao.PaintActivity"
+            android:screenOrientation="portrait"/>
+=======
             android:screenOrientation="portrait" />
 
         <activity
@@ -135,6 +157,7 @@
         </activity>
 
 
+>>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
     </application>
 
 </manifest>

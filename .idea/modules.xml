@@ -5,25 +5,20 @@
       <module fileurl="file://$PROJECT_DIR$/CustomProject.iml" filepath="$PROJECT_DIR$/CustomProject.iml" />
       <module fileurl="file://E:\androidDemo\CustomProject\CustomView.iml" filepath="E:\androidDemo\CustomProject\CustomView.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidcheckpermissions/androidcheckpermissions.iml" filepath="$PROJECT_DIR$/androidcheckpermissions/androidcheckpermissions.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\androidcheckpermissions\androidcheckpermissions.iml" filepath="E:\androidDemo\CustomProject\androidcheckpermissions\androidcheckpermissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/animatordemo/animatordemo.iml" filepath="$PROJECT_DIR$/animatordemo/animatordemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_webview_onscrollchange/app_webview_onscrollchange.iml" filepath="$PROJECT_DIR$/app_webview_onscrollchange/app_webview_onscrollchange.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\app_webview_onscrollchange\app_webview_onscrollchange.iml" filepath="E:\androidDemo\CustomProject\app_webview_onscrollchange\app_webview_onscrollchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientproject/clientproject.iml" filepath="$PROJECT_DIR$/clientproject/clientproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/easypermissions/easypermissions.iml" filepath="$PROJECT_DIR$/easypermissions/easypermissions.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\easypermissions\easypermissions.iml" filepath="E:\androidDemo\CustomProject\easypermissions\easypermissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_swipeback/library_swipeback.iml" filepath="$PROJECT_DIR$/library_swipeback/library_swipeback.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\library_swipeback\library_swipeback.iml" filepath="E:\androidDemo\CustomProject\library_swipeback\library_swipeback.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvpproject/mvpproject.iml" filepath="$PROJECT_DIR$/mvpproject/mvpproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/plug_host_app/plug_host_app.iml" filepath="$PROJECT_DIR$/plug_host_app/plug_host_app.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\plug_host_app\plug_host_app.iml" filepath="E:\androidDemo\CustomProject\plug_host_app\plug_host_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/plug_host_dexclassloader/plug_host_dexclassloader.iml" filepath="$PROJECT_DIR$/plug_host_dexclassloader/plug_host_dexclassloader.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\plug_host_dexclassloader\plug_host_dexclassloader.iml" filepath="E:\androidDemo\CustomProject\plug_host_dexclassloader\plug_host_dexclassloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/plug_service_skin1/plug_service_skin1.iml" filepath="$PROJECT_DIR$/plug_service_skin1/plug_service_skin1.iml" />
-      <module fileurl="file://E:\androidDemo\CustomProject\plug_service_skin1\plug_service_skin1.iml" filepath="E:\androidDemo\CustomProject\plug_service_skin1\plug_service_skin1.iml" />
       <module fileurl="file://$PROJECT_DIR$/qqpulldownproject/qqpulldownproject.iml" filepath="$PROJECT_DIR$/qqpulldownproject/qqpulldownproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavaretrift/rxjavaretrift.iml" filepath="$PROJECT_DIR$/rxjavaretrift/rxjavaretrift.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serverproject/serverproject.iml" filepath="$PROJECT_DIR$/serverproject/serverproject.iml" />
     </modules>
   </component>
 </project>

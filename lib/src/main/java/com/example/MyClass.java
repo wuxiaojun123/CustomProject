@@ -7,8 +7,11 @@ public class MyClass {
         boolean result = false;
 
         if(!result){
-            System.out.println("result="+result);
+            System.out.println("嘿嘿result="+result);
         }
+
+        int a = 8|4;
+        System.out.println(a);
 
     }
 
