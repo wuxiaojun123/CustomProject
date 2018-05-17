@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_webview_onscrollchange/app_webview_onscrollchange.iml" filepath="$PROJECT_DIR$/app_webview_onscrollchange/app_webview_onscrollchange.iml" />
       <module fileurl="file://$PROJECT_DIR$/clientproject/clientproject.iml" filepath="$PROJECT_DIR$/clientproject/clientproject.iml" />
+      <module fileurl="file://D:\projectspace\myself\CustomProject\clientproject\clientproject.iml" filepath="D:\projectspace\myself\CustomProject\clientproject\clientproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/easypermissions/easypermissions.iml" filepath="$PROJECT_DIR$/easypermissions/easypermissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_swipeback/library_swipeback.iml" filepath="$PROJECT_DIR$/library_swipeback/library_swipeback.iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/qqpulldownproject/qqpulldownproject.iml" filepath="$PROJECT_DIR$/qqpulldownproject/qqpulldownproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavaretrift/rxjavaretrift.iml" filepath="$PROJECT_DIR$/rxjavaretrift/rxjavaretrift.iml" />
       <module fileurl="file://$PROJECT_DIR$/serverproject/serverproject.iml" filepath="$PROJECT_DIR$/serverproject/serverproject.iml" />
+      <module fileurl="file://D:\projectspace\myself\CustomProject\serverproject\serverproject.iml" filepath="D:\projectspace\myself\CustomProject\serverproject\serverproject.iml" />
     </modules>
   </component>
 </project>

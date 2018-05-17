@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+<<<<<<< HEAD
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+=======
         <!--<activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>-->
+>>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
 
         <activity
             android:name=".webview.WebViewActivity"
@@ -115,6 +125,7 @@
 
         <activity
             android:name=".recyclerview.RecyclerManagerActivity"
+<<<<<<< HEAD
             android:screenOrientation="portrait"
             />
 
@@ -125,6 +136,8 @@
         <activity
             android:name=".dongnao.PaintActivity"
             android:screenOrientation="portrait"/>
+=======
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".recyclerview.snaphelper.SnapHelperRecyclerViewActivity"
@@ -143,6 +156,8 @@
             </intent-filter>
         </activity>
 
+
+>>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
     </application>
 
 </manifest>
