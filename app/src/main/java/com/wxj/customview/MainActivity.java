@@ -171,5 +171,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         super.onDestroy();
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5422f8507aed3e611c13493f91dbb9d26be352c8
 }

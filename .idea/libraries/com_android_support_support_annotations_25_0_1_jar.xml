@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="com.android.support:support-annotations:25.0.1@jar">
     <CLASSES>
-      <root url="jar://D:/developmentTools/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar!/" />
+      <root url="jar://E:/androidStudio/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://D:/developmentTools/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1-javadoc.jar!/" />

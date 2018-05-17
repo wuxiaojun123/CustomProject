@@ -27,205 +27,218 @@ import java.util.List;
 
 public class GameView extends FrameLayout {
 
-	private Paint			mRectPaint;					// 矩形画笔
+    private Paint mRectPaint;                    // 矩形画笔
 
-	private Paint			mPersonPaint;				// 小人画笔
+    private Paint mPersonPaint;                // 小人画笔
 
-	private Bitmap			mPersonBitmap;				// 小人
+    private Bitmap mPersonBitmap;                // 小人
 
-	private int				forwardStep;				// 向前几步
+    private RectF currentLocationRectF;        // 当前位置
 
-	private RectF			currentLocationRectF;		// 当前位置
+    private int currentRow, currentColumn;    // 当前位置
 
-	private int				currentRow, currentColumn;	// 当前位置
+    private int singleRectSize;                // 单个矩形大小
 
-	private int				singleRectSize;				// 单个矩形大小
+    private int maxWidthCount = 5;        // 一行最大可显示矩形数
 
-	private int				maxWidthCount	= 5;		// 一行最大可显示矩形数
+    private GameMapManager gameMapManager;
 
-	private GameMapManager	gameMapManager;
+    public List<GameBean> gameBeanList;
 
-	public List<GameBean>	gameBeanList;
+    private HeroAnimation mHeroAnimation;
 
-	private HeroAnimation	mHeroAnimation;
+    private int mAnimationState = 0;        // 当前绘制动画状态ID
 
-	private int				mAnimationState	= 0;		// 当前绘制动画状态ID
+    private GameBean currentGameBean;
 
-	public GameView(@NonNull Context context) {
-		this(context, null);
-	}
+    private int currentPosition;
 
-	public GameView(@NonNull Context context, @Nullable AttributeSet attrs) {
-		this(context, attrs, 0);
-	}
+    private boolean startGo;
 
-	public GameView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-		super(context, attrs, defStyleAttr);
-		init();
-	}
+    public final static int HERO_STEP = 2;                // 速度
 
-	private void init() {
-		mRectPaint = new Paint();
-		mRectPaint.setColor(Color.RED);
-		mRectPaint.setStyle(Paint.Style.STROKE);
-		mRectPaint.setStrokeWidth(5f);
-		mRectPaint.setAntiAlias(true);
+    private int currentPointX, currentPointY;    // 当前x和y坐标
 
-		mPersonPaint = new Paint();
+    private int forwardStep; // 前进步数
 
-		mPersonBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
 
-		mHeroAnimation = new HeroAnimation();
-		mHeroAnimation.initAnimation(getContext());
-	}
+    public GameView(@NonNull Context context) {
+        this(context, null);
+    }
 
-	@Override protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-		super.onLayout(changed, left, top, right, bottom);
-	}
+    public GameView(@NonNull Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
 
-	@Override protected void onDraw(Canvas canvas) {
-		super.onDraw(canvas);
-		drawAllRect(canvas);
-		drawPersonBitmap(canvas);
-	}
+    public GameView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
 
-	private void drawPersonBitmap(Canvas canvas) {
-		if (startGo) {
-			mHeroAnimation.mHeroAnim[mAnimationState].DrawAnimation(canvas, mPersonPaint, currentPointX, currentPointY, singleRectSize);
+    private void init() {
+        mRectPaint = new Paint();
+        mRectPaint.setColor(Color.RED);
+        mRectPaint.setStyle(Paint.Style.STROKE);
+        mRectPaint.setStrokeWidth(5f);
+        mRectPaint.setAntiAlias(true);
 
-			switch (mAnimationState) {
-				case HeroAnimation.ANIM_LEFT:
-					currentPointX -= HERO_STEP;
-					if (currentPointX <= currentGameBean.mRectF.left) {
-						currentPosition = currentPosition + 1;
-						currentGameBean = gameBeanList.get(currentPosition);
-						mAnimationState = HeroAnimation.ANIM_LEFT;
+        mPersonPaint = new Paint();
 
-					} else {
-						invalidate();
-					}
+        mPersonBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
 
-					break;
-				case HeroAnimation.ANIM_UP:
-					currentPointY -= HERO_STEP;
-					if (currentPointY <= currentGameBean.mRectF.top) {
-						currentPosition = currentPosition + 1;
-						logE("当前的索引是"+currentPosition);
-						currentGameBean = gameBeanList.get(currentPosition);
-						mAnimationState = HeroAnimation.ANIM_LEFT;
-						invalidate();
-					} else {
-						invalidate();
-					}
+        mHeroAnimation = new HeroAnimation();
+        mHeroAnimation.initAnimation(getContext());
+    }
 
-					break;
-				case HeroAnimation.ANIM_RIGHT:
+    @Override protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+    }
 
-					break;
-				case HeroAnimation.ANIM_DOWN:
+    @Override protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        drawAllRect(canvas);
+        drawPersonBitmap(canvas);
+    }
 
-					break;
-			}
-		} else {
-			mHeroAnimation.mHeroAnim[mAnimationState].DrawFrame(canvas, mPersonPaint, currentPointX, currentPointY, 0);
-		}
-	}
+    private void drawPersonBitmap(Canvas canvas) {
+        if (startGo) {
+            mHeroAnimation.mHeroAnim[mAnimationState].DrawAnimation(canvas, mPersonPaint, currentPointX, currentPointY, singleRectSize);
 
-	private void drawAllRect(Canvas canvas) {
-		for (int i = 0; i < gameBeanList.size(); i++) {
-			if (gameBeanList.get(i).hide) {
-				canvas.drawRect(gameBeanList.get(i).mRectF, mRectPaint);
-			}
-		}
-	}
+            switch (mAnimationState) {
+                case HeroAnimation.ANIM_LEFT:
+                    currentPointX -= HERO_STEP;
+                    if (currentPointX <= currentGameBean.mRectF.left) {
+                    } else {
+                        invalidate();
+                    }
 
-	@Override protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-		super.onSizeChanged(w, h, oldw, oldh);
-		if (w <= 0 || h <= 0) {
-			return;
-		}
-		singleRectSize = w / maxWidthCount;
+                    break;
+                case HeroAnimation.ANIM_UP:
+                    currentPointY -= HERO_STEP;
+                    logE("执行绘制方法");
+                    if (currentPointY <= currentGameBean.mRectF.top) {
+                    } else {
+                        invalidate();
+                    }
 
-		gameMapManager = new GameMapManager();
-		gameBeanList = gameMapManager.getMapFirst(h / singleRectSize, maxWidthCount, singleRectSize);
+                    break;
+                case HeroAnimation.ANIM_RIGHT:
+                    currentPointX += HERO_STEP;
+                    if (currentPointX >= currentGameBean.mRectF.right) {
+                    } else {
+                        invalidate();
+                    }
 
-		currentPosition = 0;
-		currentGameBean = gameBeanList.get(currentPosition);
-		currentLocationRectF = currentGameBean.mRectF;
-		mAnimationState = HeroAnimation.ANIM_UP;
-		currentPointX = (int) currentGameBean.mRectF.left;
-		currentPointY = (int) currentGameBean.mRectF.top;
-	}
+                    break;
+                case HeroAnimation.ANIM_DOWN:
+                    currentPointY += HERO_STEP;
+                    if (currentPointY >= currentGameBean.mRectF.bottom) {
+                    } else {
+                        invalidate();
+                    }
 
-	private GameBean		currentGameBean;
+                    break;
+            }
+        } else {
+            mHeroAnimation.mHeroAnim[mAnimationState].DrawFrame(canvas, mPersonPaint, currentPointX, currentPointY, 0);
+        }
+    }
 
-	private int				currentPosition;
+    private void drawAllRect(Canvas canvas) {
+        for (int i = 0; i < gameBeanList.size(); i++) {
+            if (gameBeanList.get(i).hide) {
+                canvas.drawRect(gameBeanList.get(i).mRectF, mRectPaint);
+            }
+        }
+    }
 
-	private boolean			startGo;
+    @Override protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        if (w <= 0 || h <= 0) {
+            return;
+        }
+        singleRectSize = w / maxWidthCount;
 
-	public final static int	HERO_STEP	= 2;				// 速度
+        gameMapManager = new GameMapManager();
+        gameBeanList = gameMapManager.getMapFirst(h / singleRectSize, maxWidthCount, singleRectSize);
 
-	private int				currentPointX, currentPointY;	// 当前x和y坐标
+        currentPosition = 0;
+        currentGameBean = gameBeanList.get(currentPosition);
+        currentLocationRectF = currentGameBean.mRectF;
+        mAnimationState = HeroAnimation.ANIM_UP;
+        currentPointX = (int) currentGameBean.mRectF.left;
+        currentPointY = (int) currentGameBean.mRectF.top;
+    }
 
-	/***
-	 *
-	 * 如何计算小人是往左，上，右，下四个方向走 拿到当前currentGameBean 向前: 拿到前一个frontGameBean
-	 * 比较rowX，如果frontGameBean.rowX < currentGameBean.rowX
-	 * 
-	 * @param step
-	 */
-	public void setForwardStep(int step) {
-		switch (step) {
-			case 1:
 
-				if (currentPosition + 1 >= gameBeanList.size()) {
-					showToast("需要换场景了");
-					return;
-				}
-				// 例如当前currentGameBean的rowX=5,columnY=2
-				GameBean frontGameBean = gameBeanList.get(currentPosition + 1);
-				if (currentGameBean.rowX > frontGameBean.rowX) { // 换行 rowX为5，需要换成4
-					if (currentGameBean.columnY < frontGameBean.columnY) {
 
-					} else if (currentGameBean.columnY < frontGameBean.columnY) {
+    /***
+     *
+     * 如何计算小人是往左，上，右，下四个方向走 拿到当前currentGameBean 向前: 拿到前一个frontGameBean
+     * 比较rowX，如果frontGameBean.rowX < currentGameBean.rowX
+     *
+     * @param step
+     */
+    public void setForwardStep(int step) {
+        this.forwardStep = step;
 
-					} else {
-						mAnimationState = HeroAnimation.ANIM_UP;
-						currentPosition = currentPosition + 1;
-						currentGameBean = frontGameBean;
-						startGo = true;
-						invalidate();
-					}
-				} else if (currentGameBean.rowX == frontGameBean.rowX) { // 不需要换行
+        if (currentPosition + 1 >= gameBeanList.size()) {
+            showToast("需要换场景了");
+            return;
+        }
+        // 例如当前currentGameBean的rowX=5,columnY=2
+        GameBean frontGameBean = gameBeanList.get(currentPosition + 1);
+        logE("currentGameBean.columnY="+currentGameBean.columnY+"--frontGameBean.columnY="+frontGameBean.columnY+"--"+currentPosition);
+        if (currentGameBean.rowX > frontGameBean.rowX) { // 换行 rowX为5，需要换成4
 
-				}
+            if (currentGameBean.columnY == frontGameBean.columnY) {
+                mAnimationState = HeroAnimation.ANIM_UP;
+                resetCurrentGameBean(frontGameBean);
+            }
+        } else if (currentGameBean.rowX == frontGameBean.rowX) { // 判断左右方向   currentGameBean.columnY=0--frontGameBean.columnY=1
+            if (frontGameBean.columnY > currentGameBean.columnY) { // 向右
+                mAnimationState = HeroAnimation.ANIM_RIGHT;
+                resetCurrentGameBean(frontGameBean);
+            } else if (frontGameBean.columnY < currentGameBean.columnY) { // 向左
+                mAnimationState = HeroAnimation.ANIM_LEFT;
+                resetCurrentGameBean(frontGameBean);
+            }
+        }
+        switch (step) {
+            case 1:
 
-				break;
-			case 2:
+                break;
+            case 2:
 
-				break;
-			case 3:
+                break;
+            case 3:
 
-				break;
-			case 4:
+                break;
+            case 4:
 
-				break;
-			case 5:
+                break;
+            case 5:
 
-				break;
-			case 6:
+                break;
+            case 6:
 
-				break;
-		}
-		invalidate();
-	}
+                break;
+        }
+    }
 
-	private void logE(String msg) {
-		Log.e("日志", msg);
-	}
+    private void resetCurrentGameBean(GameBean frontGameBean){
+        currentPosition = currentPosition + 1;
+        currentGameBean = frontGameBean;
+        startGo = true;
+        invalidate();
+    }
 
-	private void showToast(String msg) {
-		Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
-	}
+    private void logE(String msg) {
+        Log.e("日志", msg);
+    }
+
+    private void showToast(String msg) {
+        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+    }
 
 }

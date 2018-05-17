@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,6 +25,8 @@
             </intent-filter>
         </activity>
 =======
+=======
+>>>>>>> 5422f8507aed3e611c13493f91dbb9d26be352c8
         <!--<activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +34,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>-->
+<<<<<<< HEAD
 >>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
+=======
+
+>>>>>>> 5422f8507aed3e611c13493f91dbb9d26be352c8
 
         <activity
             android:name=".webview.WebViewActivity"

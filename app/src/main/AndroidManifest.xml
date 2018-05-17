@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>-->
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5422f8507aed3e611c13493f91dbb9d26be352c8
 
         <activity
             android:name=".webview.WebViewActivity"
