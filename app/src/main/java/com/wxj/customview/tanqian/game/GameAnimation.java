@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.util.Log;
 
 public class GameAnimation {
 
@@ -111,15 +112,16 @@ public class GameAnimation {
 	public Bitmap getMatrixBitmap(int x, int y, int singleRectSize){
 		int width = mframeBitmap[mPlayID].getWidth();
 		int height = mframeBitmap[mPlayID].getHeight();
-		float scaleX = singleRectSize / width / 2;
-		float scaleY = singleRectSize / height / 2;
 
-		Matrix matrix = new Matrix();
-		matrix.postScale(scaleX, scaleY);
+		Log.e("宽度是",width+"--"+height+"--"+singleRectSize);
 
-		mframeBitmap[mPlayID] = Bitmap.createBitmap(mframeBitmap[mPlayID], 0, 0, width, height, matrix, true);
+//		float scaleX = singleRectSize / width / 2;
+//		float scaleY = singleRectSize / height / 2;
 
+//		Matrix matrix = new Matrix();
+//		matrix.postScale(scaleX, scaleY);
 
+//		mframeBitmap[mPlayID] = Bitmap.createBitmap(mframeBitmap[mPlayID], 0, 0, width, height, matrix, true);
 
 		return mframeBitmap[mPlayID];
 	}

@@ -4,11 +4,7 @@
     <option name="projectSpecificProfile">
       <ProjectSpecificProfile>
         <option name="formatter" value="ECLIPSE" />
-<<<<<<< HEAD
-        <option name="pathToConfigFileJava" value="E:/develop_tools/formatter/J2wFormatter0.0.2.xml" />
-=======
         <option name="pathToConfigFileJava" value="D:/developmentTools/plugin/J2wFormatter0.0.2.xml" />
->>>>>>> a64b9e02b1d4e5b9cbd7dad3b20a5603663746b9
         <option name="selectedJavaProfile" value="InitFormatter0.0.2" />
       </ProjectSpecificProfile>
     </option>

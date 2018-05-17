@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:variablePadding="true">
+
+    <item
+        android:drawable="@drawable/img_dice_4"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/img_dice_2"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/img_dice_5"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/img_dice_6"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/img_dice_1"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/img_dice_3"
+        android:duration="60" />
+
+</animation-list>

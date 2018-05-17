@@ -39,18 +39,27 @@ public class HeroAnimation {
 
     public void initAnimation(Context context) {
         // 这里可以用循环来处理总之我们需要把动画的ID传进去
+//        mHeroAnim[ANIM_DOWN] = new GameAnimation(context, new int[]{
+//                R.mipmap.hero_down_a, R.mipmap.hero_down_b,
+//                R.mipmap.hero_down_c, R.mipmap.hero_down_d}, true);
+//        mHeroAnim[ANIM_LEFT] = new GameAnimation(context, new int[]{
+//                R.mipmap.hero_left_a, R.mipmap.hero_left_b,
+//                R.mipmap.hero_left_c, R.mipmap.hero_left_d}, true);
+//        mHeroAnim[ANIM_RIGHT] = new GameAnimation(context, new int[]{
+//                R.mipmap.hero_right_a, R.mipmap.hero_right_b,
+//                R.mipmap.hero_right_c, R.mipmap.hero_right_d}, true);
+//        mHeroAnim[ANIM_UP] = new GameAnimation(context, new int[]{
+//                R.mipmap.hero_up_a, R.mipmap.hero_up_b,
+//                R.mipmap.hero_up_c, R.mipmap.hero_up_d}, true);
+
         mHeroAnim[ANIM_DOWN] = new GameAnimation(context, new int[]{
-                R.mipmap.hero_down_a, R.mipmap.hero_down_b,
-                R.mipmap.hero_down_c, R.mipmap.hero_down_d}, true);
+                R.mipmap.img_pic_user}, true);
         mHeroAnim[ANIM_LEFT] = new GameAnimation(context, new int[]{
-                R.mipmap.hero_left_a, R.mipmap.hero_left_b,
-                R.mipmap.hero_left_c, R.mipmap.hero_left_d}, true);
+                R.mipmap.img_pic_user}, true);
         mHeroAnim[ANIM_RIGHT] = new GameAnimation(context, new int[]{
-                R.mipmap.hero_right_a, R.mipmap.hero_right_b,
-                R.mipmap.hero_right_c, R.mipmap.hero_right_d}, true);
+                R.mipmap.img_pic_user}, true);
         mHeroAnim[ANIM_UP] = new GameAnimation(context, new int[]{
-                R.mipmap.hero_up_a, R.mipmap.hero_up_b,
-                R.mipmap.hero_up_c, R.mipmap.hero_up_d}, true);
+                R.mipmap.img_pic_user}, true);
     }
 
 }
