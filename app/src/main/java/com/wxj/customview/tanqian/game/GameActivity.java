@@ -72,22 +72,22 @@ public class GameActivity extends Activity {
 		int id = view.getId();
 		switch (id) {
 			case R.id.id_btn_start: // 向前或向后走几步
-				Path mPath = new Path();
-				mPath.moveTo(0, 0);
-//				mPath.quadTo(100, 0, 300, 300);
-				mPath.cubicTo(100, 0, 300, 300,0,300);
-
-				final PathMeasure pathMeasure = new PathMeasure(mPath, false);
-				ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, pathMeasure.getLength());
-				valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-
-					@Override public void onAnimationUpdate(ValueAnimator animation) {
-						float animatedValue = (float) animation.getAnimatedValue();
-						pathMeasure.getPosTan(animatedValue, pos, null);
-						idIvUser.setTranslationX(pos[0]);
-						idIvUser.setTranslationY(pos[1]);
-					}
-				});
+//				Path mPath = new Path();
+//				mPath.moveTo(0, 0);
+//				// mPath.quadTo(100, 0, 300, 300);
+//				mPath.cubicTo(100, 0, 300, 300, 0, 600);
+//
+//				final PathMeasure pathMeasure = new PathMeasure(mPath, false);
+//				ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, pathMeasure.getLength());
+//				valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//
+//					@Override public void onAnimationUpdate(ValueAnimator animation) {
+//						float animatedValue = (float) animation.getAnimatedValue();
+//						pathMeasure.getPosTan(animatedValue, pos, null);
+//						idIvUser.setTranslationX(pos[0]);
+//						idIvUser.setTranslationY(pos[1]);
+//					}
+//				});
 //				valueAnimator.setDuration(600);
 //				valueAnimator.start();
 
@@ -95,20 +95,21 @@ public class GameActivity extends Activity {
 				// ObjectAnimator.ofFloat(idIvUser,"translationX",0f,200f);
 				// ObjectAnimator translationYAnim =
 				// ObjectAnimator.ofFloat(idIvUser,"translationY",0f,200f,0f);
-				ObjectAnimator rotationAnim = ObjectAnimator.ofFloat(idIvUser, "rotation", 0f, 360f);
-				AnimatorSet animatorSet = new AnimatorSet();
-				animatorSet.setInterpolator(new LinearOutSlowInInterpolator());
-				animatorSet.setDuration(DURATION);
-				animatorSet.playTogether(valueAnimator, rotationAnim);
-				animatorSet.start();
+				// ObjectAnimator rotationAnim = ObjectAnimator.ofFloat(idIvUser, "rotation",
+				// 0f, 360f);
+				// AnimatorSet animatorSet = new AnimatorSet();
+				// animatorSet.setInterpolator(new LinearOutSlowInInterpolator());
+				// animatorSet.setDuration(DURATION);
+				// animatorSet.playTogether(valueAnimator, rotationAnim);
+				// animatorSet.start();
 
-				// idIvDice.setImageDrawable(null);
-				// if (animationDrawable.isRunning()) {
-				// animationDrawable.stop();
-				// } else {
-				// animationDrawable.start();
-				// mHandler.sendEmptyMessageDelayed(1, 1000);
-				// }
+				idIvDice.setImageDrawable(null);
+				if (animationDrawable.isRunning()) {
+					animationDrawable.stop();
+				} else {
+					animationDrawable.start();
+					mHandler.sendEmptyMessageDelayed(1, 1000);
+				}
 				break;
 		}
 	}

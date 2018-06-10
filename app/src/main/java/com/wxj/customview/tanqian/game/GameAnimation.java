@@ -86,10 +86,10 @@ public class GameAnimation {
 	public void DrawAnimation(Canvas Canvas, Paint paint, int x, int y, int singleRectSize) {
 		// 如果没有播放结束则继续播放
 		if (!mIsend) {
-			mframeBitmap[mPlayID] = getMatrixBitmap(x,y,singleRectSize);
+//			mframeBitmap[mPlayID] = getMatrixBitmap(x,y,singleRectSize);
 
-			x = x+(singleRectSize-mframeBitmap[mPlayID].getWidth())/2;
-			y = y+(singleRectSize-mframeBitmap[mPlayID].getHeight())/2;
+//			x = x+(singleRectSize-mframeBitmap[mPlayID].getWidth())/2;
+//			y = y+(singleRectSize-mframeBitmap[mPlayID].getHeight())/2;
 
 			Canvas.drawBitmap(mframeBitmap[mPlayID], x, y, paint);
 			long time = System.currentTimeMillis();
@@ -115,13 +115,13 @@ public class GameAnimation {
 
 		Log.e("宽度是",width+"--"+height+"--"+singleRectSize);
 
-//		float scaleX = singleRectSize / width / 2;
-//		float scaleY = singleRectSize / height / 2;
+		float scaleX = singleRectSize / width / 2;
+		float scaleY = singleRectSize / height / 2;
 
-//		Matrix matrix = new Matrix();
-//		matrix.postScale(scaleX, scaleY);
+		Matrix matrix = new Matrix();
+		matrix.postScale(scaleX, scaleY);
 
-//		mframeBitmap[mPlayID] = Bitmap.createBitmap(mframeBitmap[mPlayID], 0, 0, width, height, matrix, true);
+		mframeBitmap[mPlayID] = Bitmap.createBitmap(mframeBitmap[mPlayID], 0, 0, width, height, matrix, true);
 
 		return mframeBitmap[mPlayID];
 	}
