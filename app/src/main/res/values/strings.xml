@@ -44,4 +44,8 @@
     <string name="string_next_stag_leading_money_middle">现在没了，下午来领吧！</string>
     <string name="string_next_stag_leading_money_late">现在没了，夜晚来领吧！</string>
 
+    <string name="string_speed"/>
+    <string name="string_init_location" />
+    <string name="string_direction_isup" />
+
 </resources>
