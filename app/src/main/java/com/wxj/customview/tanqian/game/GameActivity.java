@@ -63,7 +63,7 @@ public class GameActivity extends Activity {
 		idIvDice.setBackgroundDrawable(animationDrawable);
 	}
 
-	private final int	DURATION	= 600;
+	private final int	DURATION	= 2000;
 
 	// 获取当前线段的位置 pos[0]为x轴 pos[1]为y轴
 	private float[]		pos			= new float[2];
@@ -75,7 +75,7 @@ public class GameActivity extends Activity {
 				Path mPath = new Path();
 				mPath.moveTo(0, 0);
 //				mPath.quadTo(100, 0, 300, 300);
-				mPath.cubicTo(100, 0, 300, 300,0,300);
+				mPath.cubicTo(0, 0, 600, 300,0,300);
 
 				final PathMeasure pathMeasure = new PathMeasure(mPath, false);
 				ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, pathMeasure.getLength());
