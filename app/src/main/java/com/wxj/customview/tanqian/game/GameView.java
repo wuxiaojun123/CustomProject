@@ -31,7 +31,6 @@ public class GameView extends FrameLayout {
 
 	private Bitmap			mPersonBitmap;					// 小人
 
-	private RectF			currentLocationRectF;			// 当前位置
 
 	private int				currentRow, currentColumn;		// 当前位置
 
@@ -53,7 +52,7 @@ public class GameView extends FrameLayout {
 
 	private boolean			startGo;
 
-	public int				HERO_STEP		= 30;			// 速度
+	public int				HERO_STEP		= 2;			// 速度
 
 	private int				currentPointX, currentPointY;	// 当前x和y坐标
 
@@ -175,7 +174,6 @@ public class GameView extends FrameLayout {
 
 		currentPosition = 0;
 		currentGameBean = gameBeanList.get(currentPosition);
-		currentLocationRectF = currentGameBean.mRectF;
 		mAnimationState = HeroAnimation.ANIM_UP;
 		currentPointX = (int) currentGameBean.mRectF.left;
 		currentPointY = (int) currentGameBean.mRectF.top;
